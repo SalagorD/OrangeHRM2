@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation Test suite" guice-stage="DEVELOPMENT">
+
+	<!-- Runnning tests by groups -->
+<!-- 	<groups>
+		<run>
+			<include name="SmokeTests" />
+		</run>
+	</groups> -->
+
+	<!-- running tests by class names -->
+<!-- 	<classes>
+		<class name="com.selenium.testscripts.SmokeTests">
+		</class>
+	</classes> -->
+
+	<!-- Running by package -->
+<!-- 	<packages>
+		<package name="test.sample" />
+	</packages> -->
+
+	<!-- Running by method -->
+<!-- 	<class name="test.Test1">
+		<methods>
+			<include name="m1" />
+			<include name="m2" />
+		</methods>
+	</class> -->
+
+
+	<test thread-count="5" name="Default test" verbose="2">
+		<classes>
+			<class name="com.selenium.tests.TestingLogin" />
+		</classes>
+	</test> <!-- Default test -->
+</suite> <!-- Default suite -->

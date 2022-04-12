@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.selenium.tests.LogInTest">
+        <methods>
+          <include name="testingLogIn" invocation-numbers="0 1"/>
+          <include name="afterAllMethods"/>
+          <include name="beforeAllMethods"/>
+          <include name="setUpBeforeEachTest"/>
+          <include name="cleanUpAfterEachTest"/>
+        </methods>
+      </class> <!-- com.selenium.tests.LogInTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
