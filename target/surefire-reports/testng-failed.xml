@@ -3,15 +3,15 @@
 <suite verbose="0" name="Failed suite [Automation Test suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.selenium.tests.TestingLogin">
+      <class name="com.selenium.tests.LogInTest">
         <methods>
           <include name="afterAllMethods"/>
           <include name="beforeAllMethods"/>
+          <include name="TC_OHRM_Login_1"/>
           <include name="setUpBeforeEachTest"/>
-          <include name="buyAHouseTest" invocation-numbers="0 1"/>
           <include name="cleanUpAfterEachTest"/>
         </methods>
-      </class> <!-- com.selenium.tests.TestingLogin -->
+      </class> <!-- com.selenium.tests.LogInTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Automation Test suite] -->

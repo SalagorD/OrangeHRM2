@@ -31,86 +31,20 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">35.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">4</td><td class="numi">4</td><td class="numi">0</td><td class="numi">0</td><td class="numi">20.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Default test &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="2">com.selenium.tests.TestingLogin</td><td><a href="#m1"><b>buyAHouseTest</b>  </a></td><td class="numi">2</td><td>1649316608409</td><td class="numi">30053</td></tr><tr class="failedodd"><td><a href="#m2"><b>buyAHouseTest</b>  </a></td><td class="numi">2</td><td>1649316608409</td><td class="numi">30053</td></tr>
+<tr><th colspan="4">Default test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="4">com.selenium.tests.LogInTest</td><td><a href="#m1"><b>TC_OHRM_Login_1</b> (SmokeTest) </a></td><td class="numi">1</td><td>1649907305259</td><td class="numi">2710</td></tr><tr class="passedodd"><td><a href="#m2"><b>TC_OHRM_Login_2</b>  </a></td><td class="numi">1</td><td>1649907310212</td><td class="numi">2329</td></tr><tr class="passedodd"><td><a href="#m3"><b>TC_OHRM_Login_3</b>  </a></td><td class="numi">1</td><td>1649907314657</td><td class="numi">1920</td></tr><tr class="passedodd"><td><a href="#m4"><b>TC_OHRM_Login_4</b>  </a></td><td class="numi">1</td><td>1649907318723</td><td class="numi">1856</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">com.selenium.tests.TestingLogin:buyAHouseTest</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
-<tr class="param stripe"><td>john</td>
-<td>john333</td>
-</tr>
-<tr><td style="padding-left:3em" colspan="2">
-<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#menu_admin_viewAdminModule&quot;}
-  (Session info: chrome=100.0.4896.60)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
-System info: host: &apos;XPS17&apos;, ip: &apos;192.168.1.156&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e1792cbb6967f88386755973fd2b74e9, findElement {using=id, value=menu_admin_viewAdminModule}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.60, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\salag\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59636}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59636/devtoo..., se:cdpVersion: 100.0.4896.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e1792cbb6967f88386755973fd2b74e9</p>
-sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
-<br/>at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-<br/>at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-<br/>at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-<br/>at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-<br/>at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-<br/>at com.selenium.pages.LoginPage.clickAdminTab(LoginPage.java:42)
-<br/>at com.selenium.tests.TestingLogin.buyAHouseTest(TestingLogin.java:42)
-<br/>29 lines not shown
-</td></tr>
-</table>
+<h2 id="m1">com.selenium.tests.LogInTest:TC_OHRM_Login_1</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">com.selenium.tests.TestingLogin:buyAHouseTest</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
-<tr class="param stripe"><td>Admin</td>
-<td>admin123</td>
-</tr>
-<tr><td style="padding-left:3em" colspan="2">
-<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#menu_admin_viewAdminModule&quot;}
-  (Session info: chrome=100.0.4896.60)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
-System info: host: &apos;XPS17&apos;, ip: &apos;192.168.1.156&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [babb6b9bbc7dac0636b832a565c1ce54, findElement {using=id, value=menu_admin_viewAdminModule}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.60, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\salag\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59584}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59584/devtoo..., se:cdpVersion: 100.0.4896.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: babb6b9bbc7dac0636b832a565c1ce54</p>
-sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
-<br/>at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-<br/>at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-<br/>at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-<br/>at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-<br/>at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-<br/>at com.selenium.pages.LoginPage.clickAdminTab(LoginPage.java:42)
-<br/>at com.selenium.tests.TestingLogin.buyAHouseTest(TestingLogin.java:42)
-<br/>29 lines not shown
-</td></tr>
-</table>
+<h2 id="m2">com.selenium.tests.LogInTest:TC_OHRM_Login_3</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">com.selenium.tests.LogInTest:TC_OHRM_Login_2</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">com.selenium.tests.LogInTest:TC_OHRM_Login_4</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

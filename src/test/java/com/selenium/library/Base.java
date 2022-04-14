@@ -46,7 +46,7 @@ public class Base {
 	@BeforeClass
 	public void beforeAllMethods() {
 		try {
-			log.info("==================================Automation suite started");
+			log.info("==================================>Automation suite started");
 
 			JavaPropertiesManager writeManager = new JavaPropertiesManager("src/test/resources/session.properties");
 			writeManager.setProperty("startTime", getCurrentTime());
@@ -67,7 +67,9 @@ public class Base {
 	@BeforeMethod
 	public void setUpBeforeEachTest() {
 		try {
-			log.info("=====================Performing setUp");
+			log.info("====================>");
+			log.info("=====================>Performing setUp");
+			log.info("====================>");
 			myLib = new SeleniumMethodsLibrary();
 
 			if (browserType.toLowerCase().contains("chrome")) {
@@ -92,7 +94,9 @@ public class Base {
 	@AfterMethod
 	public void cleanUpAfterEachTest(ITestResult iResult) {
 		try {
-			log.info("=====================Performing cleanUp");
+			log.info("===========================>");
+			log.info("============================>Performing endTest cleanUp");
+			log.info("===========================>");
 			// if test fails, screenshot is taken and saved
 			if (ITestResult.FAILURE == iResult.getStatus()) {
 				// test failed, call capture screenshot method
@@ -135,7 +139,7 @@ public class Base {
 				email.sendEmail(emailSubject, emailBody);
 			}
 
-			log.info("==================================Automation test suite ended");
+			log.info("==================================>Automation test suite ended");
 		} catch (Exception e) {
 			log.error("Error", e);
 		}

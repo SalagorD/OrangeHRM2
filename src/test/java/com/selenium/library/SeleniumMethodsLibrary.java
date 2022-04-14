@@ -9,13 +9,17 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -213,6 +217,25 @@ public class SeleniumMethodsLibrary {
 	// ############################################################################################################
 	// Selenium methods below:
 
+	/**
+	 * Method that explicitly waits for visibility of element, for
+	 * defined(waitTimeInSec) amount of seconds..
+	 * 
+	 * @param by
+	 * @return WebElement that this method finds.
+	 */
+	public WebElement waitForElementVisibility(By by) {
+		WebElement element = null;
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitTimeInSec));
+			element = wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+		} catch (Exception e) {
+			log.error("Error", e);
+			assertTrue(false);
+		}
+		return element;
+	}
+	
 	// ############################################################################################################
 	// ############################################################################################################
 	// Pure Java methods below:
