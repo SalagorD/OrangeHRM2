@@ -17,8 +17,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -216,10 +218,93 @@ public class SeleniumMethodsLibrary {
 	// ############################################################################################################
 	// ############################################################################################################
 	// Selenium methods below:
+	
+	//TODO develop a method that selects from dropdown using LIST
+	private void selectFromDynamicDropdown(By by, String visibleTextValue) {
+		try {
+			WebElement field = driver.findElement(by);
+			field.click();
+			field.clear();
+			field.sendKeys(visibleTextValue);
+			WebElement dropdownElem = driver.findElement(By.cssSelector("body > div.ac_results"));
+			List<WebElement> list = dropdownElem.findElements(By.tagName("li"));
+			for(WebElement listElem : list) {
+				Actions action = new Actions(driver);
+				action.moveToElement(listElem).perform();
+				String elemText = listElem.getText();
+				if(elemText.contains(visibleTextValue)) {
+					listElem.click();
+				}
+			}
+		} catch (Exception e) {
+			log.error("Error:", e);
+			assertTrue(false);
+		}
+	}
+
+	public void selectFromDropdown(By by, String visibleTextValue) {
+		try {
+			Select dropDown = new Select(driver.findElement(by));
+			dropDown.selectByVisibleText(visibleTextValue);
+		} catch (Exception e) {
+			log.error("Error:", e);
+			assertTrue(false);
+		}
+	}
+
+	public WebElement enterTextField(By by, String text) {
+		WebElement element = null;
+		try {
+			element = driver.findElement(by);
+			element.clear();
+			element.sendKeys(text);
+		} catch (Exception e) {
+			log.error("Error", e);
+			assertTrue(false);
+		}
+		return element;
+	}
+
+	public WebElement clickButton(By by) {
+		WebElement element = null;
+		try {
+			element = driver.findElement(by);
+			element.click();
+		} catch (Exception e) {
+			log.error("Error", e);
+			assertTrue(false);
+		}
+		return element;
+	}
+
+	public void hoverThenSelectFromDropdown(By by, String elementText) {
+		try {
+			WebElement tabElem = driver.findElement(by);
+			Actions action = new Actions(driver);
+			action.moveToElement(tabElem).perform();
+			// finding parent element
+			WebElement parent = tabElem.findElement(By.xpath("./.."));
+			// searching for "li" elements from parent element
+			List<WebElement> list = parent.findElements(By.tagName("li"));
+			// log.info("List size:" +list.size());
+			for (WebElement listElem : list) {
+				// log.info("Element: "+listElem.getText());
+				// sleep(1);
+				action.moveToElement(listElem).perform();
+				String elemText = listElem.getText();
+				if (elemText.contains(elementText)) {
+					listElem.click();
+				}
+			}
+		} catch (Exception e) {
+			log.error("Error", e);
+			assertTrue(false);
+		}
+	}
 
 	/**
 	 * Method that explicitly waits for visibility of element, for
-	 * defined(waitTimeInSec) amount of seconds..
+	 * defined(waitTimeInSec) amount of seconds.
 	 * 
 	 * @param by
 	 * @return WebElement that this method finds.
@@ -235,7 +320,26 @@ public class SeleniumMethodsLibrary {
 		}
 		return element;
 	}
-	
+
+	/**
+	 * Method that explicitly waits for INvisibility of element, for
+	 * defined(waitTimeInSec) amount of seconds.
+	 * 
+	 * @param by
+	 * @return boolean
+	 */
+	public boolean waitForElement_Invisibility(By by) {
+		boolean element = false;
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitTimeInSec));
+			element = wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
+		} catch (Exception e) {
+			log.error("Error", e);
+			assertTrue(false);
+		}
+		return element;
+	}
+
 	// ############################################################################################################
 	// ############################################################################################################
 	// Pure Java methods below:
@@ -360,10 +464,12 @@ public class SeleniumMethodsLibrary {
 				}
 			}
 		} catch (Exception e) {
-			log.error("Error", e);
+			log.error("Error:", e);
 			assertTrue(false);
 		}
 		return fileNames;
 	}
+
+	
 
 }

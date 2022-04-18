@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
 <suite name="Automation Test suite" guice-stage="DEVELOPMENT">
 
 	<!-- Runnning tests by groups -->
@@ -17,7 +19,7 @@
 		name="m2" /> </methods> </class> -->
 
 
-	<test thread-count="5" name="Default test" verbose="2">
+	<test thread-count="5" name="Regression Tests" verbose="2">
 		<packages>
 			<package name="com.selenium.tests" />
 		</packages>

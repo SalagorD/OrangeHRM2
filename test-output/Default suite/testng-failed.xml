@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.selenium.tests.LogInTest">
+      <class name="com.selenium.tests.UsersPageTest">
         <methods>
-          <include name="testingLogIn" invocation-numbers="0 1"/>
           <include name="afterAllMethods"/>
           <include name="beforeAllMethods"/>
+          <include name="TC_OHRM_Admin_Users_SearchBtn_1"/>
           <include name="setUpBeforeEachTest"/>
           <include name="cleanUpAfterEachTest"/>
         </methods>
-      </class> <!-- com.selenium.tests.LogInTest -->
+      </class> <!-- com.selenium.tests.UsersPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

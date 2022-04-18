@@ -2,6 +2,7 @@ package com.selenium.library;
 
 import static org.junit.Assert.assertTrue;
 
+import java.lang.reflect.Method;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -44,10 +46,10 @@ public class Base {
 	}
 
 	@BeforeClass
-	public void beforeAllMethods() {
+	public void beforeAllMethods(ITestContext testContext) {
 		try {
 			log.info("==================================>Automation suite started");
-
+			log.info("=====================>Starting test suite:[" + testContext.getName() + "]");
 			JavaPropertiesManager writeManager = new JavaPropertiesManager("src/test/resources/session.properties");
 			writeManager.setProperty("startTime", getCurrentTime());
 
@@ -58,18 +60,16 @@ public class Base {
 			toAddress = readManager.readProperty("toAddress");
 			ccAddress = readManager.readProperty("ccAddress");
 			bccAddress = readManager.readProperty("bccAddress");
-
 		} catch (Exception e) {
 			log.error("Error", e);
 		}
 	}
 
 	@BeforeMethod
-	public void setUpBeforeEachTest() {
+	public void setUpBeforeEachTest(Method methodName) {
 		try {
-			log.info("====================>");
+			log.info("=====================>Starting test case:[" + methodName.getName() + "]");
 			log.info("=====================>Performing setUp");
-			log.info("====================>");
 			myLib = new SeleniumMethodsLibrary();
 
 			if (browserType.toLowerCase().contains("chrome")) {
@@ -83,8 +83,8 @@ public class Base {
 			} else {
 				log.error("Not implemented yet", new NullPointerException());
 			}
-
-			//driver.manage().window().maximize();
+			// driver.manage().window().maximize();
+			log.info("***************************************************>setUp complete");
 		} catch (Exception e) {
 			log.error("Error", e);
 			assertTrue(false);
@@ -94,15 +94,14 @@ public class Base {
 	@AfterMethod
 	public void cleanUpAfterEachTest(ITestResult iResult) {
 		try {
-			log.info("===========================>");
-			log.info("============================>Performing endTest cleanUp");
-			log.info("===========================>");
+			log.info("***************************************************>Performing endTest cleanUp");
 			// if test fails, screenshot is taken and saved
 			if (ITestResult.FAILURE == iResult.getStatus()) {
 				// test failed, call capture screenshot method
 				log.info("Failed Test: " + iResult.getName());
 				myLib.takeScreenShot("target/screenshots/", iResult.getName());
 			}
+			log.info("############################>cleanUp complete!");
 			if (driver != null) {
 				// closes the browser only, driver is still live
 				driver.close();
@@ -138,8 +137,7 @@ public class Base {
 						+ "Automation Team";
 				email.sendEmail(emailSubject, emailBody);
 			}
-
-			log.info("==================================>Automation test suite ended");
+			log.info("##################################>Automation test suite ended");
 		} catch (Exception e) {
 			log.error("Error", e);
 		}

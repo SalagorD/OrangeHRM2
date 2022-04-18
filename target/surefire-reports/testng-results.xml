@@ -1,100 +1,251 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Automation Test suite" duration-ms="20042" started-at="2022-04-14T03:35:01Z" finished-at="2022-04-14T03:35:21Z">
+  <suite name="Automation Test suite" duration-ms="93015" started-at="2022-04-16T04:14:43Z" finished-at="2022-04-16T04:16:16Z">
     <groups>
       <group name="SmokeTest">
-        <method signature="LogInTest.TC_OHRM_Login_1()[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f]" name="TC_OHRM_Login_1" class="com.selenium.tests.LogInTest"/>
+        <method signature="LogInTest.TC_OHRM_Login_1()[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b]" name="TC_OHRM_Login_1" class="com.selenium.tests.LogInTest"/>
       </group> <!-- SmokeTest -->
     </groups>
-    <test name="Default test" duration-ms="20042" started-at="2022-04-14T03:35:01Z" finished-at="2022-04-14T03:35:21Z">
+    <test name="Regression Tests" duration-ms="93015" started-at="2022-04-16T04:14:43Z" finished-at="2022-04-16T04:16:16Z">
       <class name="com.selenium.tests.LogInTest">
-        <test-method status="PASS" signature="beforeAllMethods()[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f]" name="beforeAllMethods" is-config="true" duration-ms="39" started-at="2022-04-13T23:35:01Z" finished-at="2022-04-13T23:35:01Z">
+        <test-method status="PASS" signature="beforeAllMethods()[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b]" name="beforeAllMethods" is-config="true" duration-ms="95" started-at="2022-04-16T00:14:43Z" finished-at="2022-04-16T00:14:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeAllMethods -->
-        <test-method status="PASS" signature="setUpBeforeEachTest()[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f]" name="setUpBeforeEachTest" is-config="true" duration-ms="3558" started-at="2022-04-13T23:35:01Z" finished-at="2022-04-13T23:35:05Z">
+        <test-method status="PASS" signature="setUpBeforeEachTest(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b]" name="setUpBeforeEachTest" is-config="true" duration-ms="6063" started-at="2022-04-16T00:14:43Z" finished-at="2022-04-16T00:14:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@124d02b2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.selenium.tests.LogInTest.TC_OHRM_Login_1()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeEachTest -->
-        <test-method status="PASS" signature="TC_OHRM_Login_1()[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f]" name="TC_OHRM_Login_1" duration-ms="2710" started-at="2022-04-13T23:35:05Z" finished-at="2022-04-13T23:35:07Z">
+        <test-method status="PASS" signature="TC_OHRM_Login_1()[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b]" name="TC_OHRM_Login_1" duration-ms="3367" started-at="2022-04-16T00:14:49Z" finished-at="2022-04-16T00:14:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_OHRM_Login_1 -->
-        <test-method status="PASS" signature="cleanUpAfterEachTest(org.testng.ITestResult)[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f]" name="cleanUpAfterEachTest" is-config="true" duration-ms="560" started-at="2022-04-13T23:35:07Z" finished-at="2022-04-13T23:35:08Z">
+        <test-method status="PASS" signature="cleanUpAfterEachTest(org.testng.ITestResult)[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b]" name="cleanUpAfterEachTest" is-config="true" duration-ms="737" started-at="2022-04-16T00:14:53Z" finished-at="2022-04-16T00:14:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_OHRM_Login_1 status=SUCCESS method=LogInTest.TC_OHRM_Login_1()[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f] output={null}]]]>
+                <![CDATA[[TestResult name=TC_OHRM_Login_1 status=SUCCESS method=LogInTest.TC_OHRM_Login_1()[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUpAfterEachTest -->
-        <test-method status="PASS" signature="setUpBeforeEachTest()[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f]" name="setUpBeforeEachTest" is-config="true" duration-ms="1682" started-at="2022-04-13T23:35:08Z" finished-at="2022-04-13T23:35:10Z">
+        <test-method status="PASS" signature="setUpBeforeEachTest(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b]" name="setUpBeforeEachTest" is-config="true" duration-ms="2108" started-at="2022-04-16T00:14:54Z" finished-at="2022-04-16T00:14:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@124d02b2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.selenium.tests.LogInTest.TC_OHRM_Login_2()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeEachTest -->
-        <test-method status="PASS" signature="TC_OHRM_Login_2()[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f]" name="TC_OHRM_Login_2" duration-ms="2329" started-at="2022-04-13T23:35:10Z" finished-at="2022-04-13T23:35:12Z">
+        <test-method status="PASS" signature="TC_OHRM_Login_2()[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b]" name="TC_OHRM_Login_2" duration-ms="2772" started-at="2022-04-16T00:14:56Z" finished-at="2022-04-16T00:14:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_OHRM_Login_2 -->
-        <test-method status="PASS" signature="cleanUpAfterEachTest(org.testng.ITestResult)[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f]" name="cleanUpAfterEachTest" is-config="true" duration-ms="522" started-at="2022-04-13T23:35:12Z" finished-at="2022-04-13T23:35:13Z">
+        <test-method status="PASS" signature="cleanUpAfterEachTest(org.testng.ITestResult)[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b]" name="cleanUpAfterEachTest" is-config="true" duration-ms="578" started-at="2022-04-16T00:14:58Z" finished-at="2022-04-16T00:14:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_OHRM_Login_2 status=SUCCESS method=LogInTest.TC_OHRM_Login_2()[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f] output={null}]]]>
+                <![CDATA[[TestResult name=TC_OHRM_Login_2 status=SUCCESS method=LogInTest.TC_OHRM_Login_2()[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUpAfterEachTest -->
-        <test-method status="PASS" signature="setUpBeforeEachTest()[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f]" name="setUpBeforeEachTest" is-config="true" duration-ms="1594" started-at="2022-04-13T23:35:13Z" finished-at="2022-04-13T23:35:14Z">
+        <test-method status="PASS" signature="setUpBeforeEachTest(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b]" name="setUpBeforeEachTest" is-config="true" duration-ms="2264" started-at="2022-04-16T00:14:59Z" finished-at="2022-04-16T00:15:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@124d02b2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.selenium.tests.LogInTest.TC_OHRM_Login_3()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeEachTest -->
-        <test-method status="PASS" signature="TC_OHRM_Login_3()[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f]" name="TC_OHRM_Login_3" duration-ms="1920" started-at="2022-04-13T23:35:14Z" finished-at="2022-04-13T23:35:16Z">
+        <test-method status="PASS" signature="TC_OHRM_Login_3()[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b]" name="TC_OHRM_Login_3" duration-ms="2999" started-at="2022-04-16T00:15:01Z" finished-at="2022-04-16T00:15:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_OHRM_Login_3 -->
-        <test-method status="PASS" signature="cleanUpAfterEachTest(org.testng.ITestResult)[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f]" name="cleanUpAfterEachTest" is-config="true" duration-ms="494" started-at="2022-04-13T23:35:16Z" finished-at="2022-04-13T23:35:17Z">
+        <test-method status="PASS" signature="cleanUpAfterEachTest(org.testng.ITestResult)[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b]" name="cleanUpAfterEachTest" is-config="true" duration-ms="474" started-at="2022-04-16T00:15:04Z" finished-at="2022-04-16T00:15:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_OHRM_Login_3 status=SUCCESS method=LogInTest.TC_OHRM_Login_3()[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f] output={null}]]]>
+                <![CDATA[[TestResult name=TC_OHRM_Login_3 status=SUCCESS method=LogInTest.TC_OHRM_Login_3()[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUpAfterEachTest -->
-        <test-method status="PASS" signature="setUpBeforeEachTest()[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f]" name="setUpBeforeEachTest" is-config="true" duration-ms="1651" started-at="2022-04-13T23:35:17Z" finished-at="2022-04-13T23:35:18Z">
+        <test-method status="PASS" signature="setUpBeforeEachTest(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b]" name="setUpBeforeEachTest" is-config="true" duration-ms="2592" started-at="2022-04-16T00:15:05Z" finished-at="2022-04-16T00:15:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@124d02b2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.selenium.tests.LogInTest.TC_OHRM_Login_4()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeEachTest -->
-        <test-method status="PASS" signature="TC_OHRM_Login_4()[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f]" name="TC_OHRM_Login_4" duration-ms="1856" started-at="2022-04-13T23:35:18Z" finished-at="2022-04-13T23:35:20Z">
+        <test-method status="PASS" signature="TC_OHRM_Login_4()[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b]" name="TC_OHRM_Login_4" duration-ms="3371" started-at="2022-04-16T00:15:07Z" finished-at="2022-04-16T00:15:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_OHRM_Login_4 -->
-        <test-method status="PASS" signature="cleanUpAfterEachTest(org.testng.ITestResult)[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f]" name="cleanUpAfterEachTest" is-config="true" duration-ms="545" started-at="2022-04-13T23:35:20Z" finished-at="2022-04-13T23:35:21Z">
+        <test-method status="PASS" signature="cleanUpAfterEachTest(org.testng.ITestResult)[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b]" name="cleanUpAfterEachTest" is-config="true" duration-ms="555" started-at="2022-04-16T00:15:11Z" finished-at="2022-04-16T00:15:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC_OHRM_Login_4 status=SUCCESS method=LogInTest.TC_OHRM_Login_4()[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f] output={null}]]]>
+                <![CDATA[[TestResult name=TC_OHRM_Login_4 status=SUCCESS method=LogInTest.TC_OHRM_Login_4()[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUpAfterEachTest -->
-        <test-method status="PASS" signature="afterAllMethods()[pri:0, instance:com.selenium.tests.LogInTest@1ebd319f]" name="afterAllMethods" is-config="true" duration-ms="570" started-at="2022-04-13T23:35:21Z" finished-at="2022-04-13T23:35:21Z">
+        <test-method status="PASS" signature="afterAllMethods()[pri:0, instance:com.selenium.tests.LogInTest@3098cf3b]" name="afterAllMethods" is-config="true" duration-ms="676" started-at="2022-04-16T00:15:11Z" finished-at="2022-04-16T00:15:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterAllMethods -->
       </class> <!-- com.selenium.tests.LogInTest -->
-    </test> <!-- Default test -->
+      <class name="com.selenium.tests.UsersPageTest">
+        <test-method status="PASS" signature="beforeAllMethods()[pri:0, instance:com.selenium.tests.UsersPageTest@7a675056]" name="beforeAllMethods" is-config="true" duration-ms="4" started-at="2022-04-16T00:15:12Z" finished-at="2022-04-16T00:15:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeAllMethods -->
+        <test-method status="PASS" signature="setUpBeforeEachTest(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.selenium.tests.UsersPageTest@7a675056]" name="setUpBeforeEachTest" is-config="true" duration-ms="2394" started-at="2022-04-16T00:15:12Z" finished-at="2022-04-16T00:15:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@124d02b2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.selenium.tests.UsersPageTest.TC_OHRM_Users_SystemUsersField_1()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeEachTest -->
+        <test-method status="PASS" signature="TC_OHRM_Users_SystemUsersField_1()[pri:0, instance:com.selenium.tests.UsersPageTest@7a675056]" name="TC_OHRM_Users_SystemUsersField_1" duration-ms="18006" started-at="2022-04-16T00:15:14Z" finished-at="2022-04-16T00:15:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OHRM_Users_SystemUsersField_1 -->
+        <test-method status="PASS" signature="cleanUpAfterEachTest(org.testng.ITestResult)[pri:0, instance:com.selenium.tests.UsersPageTest@7a675056]" name="cleanUpAfterEachTest" is-config="true" duration-ms="499" started-at="2022-04-16T00:15:32Z" finished-at="2022-04-16T00:15:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_OHRM_Users_SystemUsersField_1 status=SUCCESS method=UsersPageTest.TC_OHRM_Users_SystemUsersField_1()[pri:0, instance:com.selenium.tests.UsersPageTest@7a675056] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUpAfterEachTest -->
+        <test-method status="PASS" signature="setUpBeforeEachTest(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.selenium.tests.UsersPageTest@7a675056]" name="setUpBeforeEachTest" is-config="true" duration-ms="2902" started-at="2022-04-16T00:15:33Z" finished-at="2022-04-16T00:15:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@124d02b2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.selenium.tests.UsersPageTest.TC_OHRM_Users_SystemUsersField_2()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeEachTest -->
+        <test-method status="PASS" signature="TC_OHRM_Users_SystemUsersField_2()[pri:0, instance:com.selenium.tests.UsersPageTest@7a675056]" name="TC_OHRM_Users_SystemUsersField_2" duration-ms="18867" started-at="2022-04-16T00:15:36Z" finished-at="2022-04-16T00:15:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OHRM_Users_SystemUsersField_2 -->
+        <test-method status="PASS" signature="cleanUpAfterEachTest(org.testng.ITestResult)[pri:0, instance:com.selenium.tests.UsersPageTest@7a675056]" name="cleanUpAfterEachTest" is-config="true" duration-ms="301" started-at="2022-04-16T00:15:55Z" finished-at="2022-04-16T00:15:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_OHRM_Users_SystemUsersField_2 status=SUCCESS method=UsersPageTest.TC_OHRM_Users_SystemUsersField_2()[pri:0, instance:com.selenium.tests.UsersPageTest@7a675056] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUpAfterEachTest -->
+        <test-method status="PASS" signature="setUpBeforeEachTest(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.selenium.tests.UsersPageTest@7a675056]" name="setUpBeforeEachTest" is-config="true" duration-ms="2279" started-at="2022-04-16T00:15:55Z" finished-at="2022-04-16T00:15:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@124d02b2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.selenium.tests.UsersPageTest.TC_OHRM_Users_SystemUsersField_3()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeEachTest -->
+        <test-method status="PASS" signature="TC_OHRM_Users_SystemUsersField_3()[pri:0, instance:com.selenium.tests.UsersPageTest@7a675056]" name="TC_OHRM_Users_SystemUsersField_3" duration-ms="17924" started-at="2022-04-16T00:15:57Z" finished-at="2022-04-16T00:16:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_OHRM_Users_SystemUsersField_3 -->
+        <test-method status="PASS" signature="cleanUpAfterEachTest(org.testng.ITestResult)[pri:0, instance:com.selenium.tests.UsersPageTest@7a675056]" name="cleanUpAfterEachTest" is-config="true" duration-ms="465" started-at="2022-04-16T00:16:15Z" finished-at="2022-04-16T00:16:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_OHRM_Users_SystemUsersField_3 status=SUCCESS method=UsersPageTest.TC_OHRM_Users_SystemUsersField_3()[pri:0, instance:com.selenium.tests.UsersPageTest@7a675056] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUpAfterEachTest -->
+        <test-method status="PASS" signature="afterAllMethods()[pri:0, instance:com.selenium.tests.UsersPageTest@7a675056]" name="afterAllMethods" is-config="true" duration-ms="700" started-at="2022-04-16T00:16:16Z" finished-at="2022-04-16T00:16:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterAllMethods -->
+      </class> <!-- com.selenium.tests.UsersPageTest -->
+    </test> <!-- Regression Tests -->
   </suite> <!-- Automation Test suite -->
 </testng-results>

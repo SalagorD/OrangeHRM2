@@ -1,9 +1,14 @@
 C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\library\JavaPropertiesManager.java
+C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\pages\AdminPage.java
 C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\library\ExcelManager.java
-C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\tests\LogInTest.java
 C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\pages\AdminUsrMgmtUsersPage.java
 C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\library\Base.java
-C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\library\EmailManager.java
+C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\tests\UsersPageTest.java
 C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\library\TextFileManager.java
-C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\library\SeleniumMethodsLibrary.java
 C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\pages\LoginPage.java
+C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\pages\RecruitmentPage.java
+C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\tests\LogInTest.java
+C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\pages\LeavePage.java
+C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\library\EmailManager.java
+C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\library\SeleniumMethodsLibrary.java
+C:\Users\salag\eclipse-workspace\2021ClassJavaTraining\DSOrangeHRMProject2\src\test\java\com\selenium\pages\MyInfoPage.java

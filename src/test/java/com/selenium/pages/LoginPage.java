@@ -1,7 +1,10 @@
 package com.selenium.pages;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
+
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,8 +15,8 @@ import org.slf4j.LoggerFactory;
 import com.selenium.library.Base;
 
 public class LoginPage extends Base {
-	public static Logger log = LoggerFactory.getLogger(LoginPage.class);
 
+	public static Logger log = LoggerFactory.getLogger(LoginPage.class);
 	private WebDriver driver;
 
 	public LoginPage(WebDriver _driver) {
@@ -32,9 +35,7 @@ public class LoginPage extends Base {
 
 	public LoginPage enterUsername(String username) {
 		try {
-			WebElement usernameField = driver.findElement(By.id("txtUsername"));
-			usernameField.clear();
-			usernameField.sendKeys(username);
+			myLib.enterTextField(By.id("txtUsername"), username);
 		} catch (Exception e) {
 			log.error("Error", e);
 			assertTrue(false);
@@ -44,9 +45,7 @@ public class LoginPage extends Base {
 
 	public LoginPage enterPassword(String password) {
 		try {
-			WebElement usernameField = driver.findElement(By.id("txtPassword"));
-			usernameField.clear();
-			usernameField.sendKeys(password);
+			myLib.enterTextField(By.id("txtPassword"), password);
 		} catch (Exception e) {
 			log.error("Error", e);
 			assertTrue(false);
@@ -56,24 +55,27 @@ public class LoginPage extends Base {
 
 	public LoginPage clickLoginBtn() {
 		try {
-			WebElement loginBtn = driver.findElement(By.id("btnLogin"));
-			loginBtn.click();
+			myLib.clickButton(By.id("btnLogin"));
 		} catch (Exception e) {
 			log.error("Error", e);
 			assertTrue(false);
 		}
 		return this;
 	}
-
-	public AdminUsrMgmtUsersPage clickAdminTab() {
+	
+	public LoginPage assertLoginSuccessful() {
 		try {
-			WebElement adminTab = driver.findElement(By.id("menu_admin_viewAdminModule"));
-			adminTab.click();
+			//todo check if invalid credentials message appeared, if yes then stop the test
+			List<WebElement> errMsg = driver.findElements(By.cssSelector("#spanMessage"));
+			if(errMsg.size() > 0) {
+				log.info("Application is overloaded, please try gain later.");
+				assertTrue(false);
+			}
 		} catch (Exception e) {
 			log.error("Error", e);
 			assertTrue(false);
 		}
-		return new AdminUsrMgmtUsersPage(driver);
+		return this;
 	}
 
 	public LoginPage assertIfInvalidCredentialsMessageIsPresent() {
@@ -81,12 +83,53 @@ public class LoginPage extends Base {
 			WebElement errMsg = myLib.waitForElementVisibility(By.cssSelector("#spanMessage"));
 			String errMsgText = errMsg.getText();
 			assertEquals(errMsgText, "Invalid credentials");
-			log.info("'"+errMsgText+"' message is present.");
+			log.info("'" + errMsgText + "' message is present.");
 		} catch (Exception e) {
 			log.error("Error", e);
 			assertTrue(false);
 		}
 		return this;
 	}
+
+	public AdminPage clickAdminTab() {
+		try {
+			myLib.clickButton(By.id("menu_admin_viewAdminModule"));
+		} catch (Exception e) {
+			log.error("Error", e);
+			assertTrue(false);
+		}
+		return new AdminPage(driver);
+	}
+	
+	public LeavePage clickLeaveTab() {
+		try {
+			myLib.clickButton(By.id("menu_admin_viewAdminModule"));
+		} catch (Exception e) {
+			log.error("Error", e);
+			assertTrue(false);
+		}
+		return new LeavePage(driver);
+	}
+	
+	public RecruitmentPage clickRecruitmentTab() {
+		try {
+			myLib.clickButton(By.id("menu_admin_viewAdminModule"));
+		} catch (Exception e) {
+			log.error("Error", e);
+			assertTrue(false);
+		}
+		return new RecruitmentPage(driver);
+	}
+	
+	public MyInfoPage clickMyInfoTab() {
+		try {
+			myLib.clickButton(By.id("menu_admin_viewAdminModule"));
+		} catch (Exception e) {
+			log.error("Error", e);
+			assertTrue(false);
+		}
+		return new MyInfoPage(driver);
+	}
+	
 
 }

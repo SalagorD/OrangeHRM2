@@ -1,72 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="2" passed="0">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34250" started-at="2022-04-07T07:44:01Z" finished-at="2022-04-07T07:44:35Z">
+  <suite name="Default suite" duration-ms="6176" started-at="2022-04-18T04:26:43Z" finished-at="2022-04-18T04:26:49Z">
     <groups>
+      <group name="Regression">
+        <method signature="UsersPageTest.TC_OHRM_Admin_Users_SearchBtn_1()[pri:0, instance:com.selenium.tests.UsersPageTest@2525ff7e]" name="TC_OHRM_Admin_Users_SearchBtn_1" class="com.selenium.tests.UsersPageTest"/>
+      </group> <!-- Regression -->
     </groups>
-    <test name="Default test" duration-ms="34250" started-at="2022-04-07T07:44:01Z" finished-at="2022-04-07T07:44:35Z">
-      <class name="com.selenium.tests.LogInTest">
-        <test-method status="PASS" signature="beforeAllMethods()[pri:0, instance:com.selenium.tests.LogInTest@152aa092]" name="beforeAllMethods" is-config="true" duration-ms="38" started-at="2022-04-07T03:44:01Z" finished-at="2022-04-07T03:44:01Z">
+    <test name="Default test" duration-ms="6176" started-at="2022-04-18T04:26:43Z" finished-at="2022-04-18T04:26:49Z">
+      <class name="com.selenium.tests.UsersPageTest">
+        <test-method status="PASS" signature="beforeAllMethods(org.testng.ITestContext)[pri:0, instance:com.selenium.tests.UsersPageTest@2525ff7e]" name="beforeAllMethods" is-config="true" duration-ms="38" started-at="2022-04-18T00:26:43Z" finished-at="2022-04-18T00:26:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7fab4be7]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeAllMethods -->
-        <test-method status="PASS" signature="setUpBeforeEachTest()[pri:0, instance:com.selenium.tests.LogInTest@152aa092]" name="setUpBeforeEachTest" is-config="true" duration-ms="2995" started-at="2022-04-07T03:44:01Z" finished-at="2022-04-07T03:44:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBeforeEachTest -->
-        <test-method status="FAIL" signature="testingLogIn(java.lang.String, java.lang.String)[pri:0, instance:com.selenium.tests.LogInTest@152aa092]" name="testingLogIn" duration-ms="13603" started-at="2022-04-07T03:44:04Z" data-provider="loginTestDateSet1" finished-at="2022-04-07T03:44:18Z">
+        <test-method status="PASS" signature="setUpBeforeEachTest(java.lang.reflect.Method)[pri:0, instance:com.selenium.tests.UsersPageTest@2525ff7e]" name="setUpBeforeEachTest" is-config="true" duration-ms="3163" started-at="2022-04-18T00:26:43Z" finished-at="2022-04-18T00:26:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin123]]>
+                <![CDATA[public void com.selenium.tests.UsersPageTest.TC_OHRM_Admin_Users_SearchBtn_1()]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeEachTest -->
+        <test-method status="FAIL" signature="TC_OHRM_Admin_Users_SearchBtn_1()[pri:0, instance:com.selenium.tests.UsersPageTest@2525ff7e]" name="TC_OHRM_Admin_Users_SearchBtn_1" duration-ms="1776" started-at="2022-04-18T00:26:46Z" finished-at="2022-04-18T00:26:48Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#menu_admin_viewAdminModule"}
-  (Session info: chrome=100.0.4896.60)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'XPS17', ip: '192.168.1.156', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dc18be85bb06db8e1ba24a63c17797f8, findElement {using=id, value=menu_admin_viewAdminModule}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.60, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\salag\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56636}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56636/devtoo..., se:cdpVersion: 100.0.4896.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: dc18be85bb06db8e1ba24a63c17797f8]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#menu_admin_viewAdminModule"}
-  (Session info: chrome=100.0.4896.60)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'XPS17', ip: '192.168.1.156', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dc18be85bb06db8e1ba24a63c17797f8, findElement {using=id, value=menu_admin_viewAdminModule}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.60, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\salag\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56636}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56636/devtoo..., se:cdpVersion: 100.0.4896.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: dc18be85bb06db8e1ba24a63c17797f8
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at com.selenium.pages.LoginPage.clickAdminTab(LoginPage.java:42)
-	at com.selenium.tests.LogInTest.testingLogIn(LogInTest.java:42)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.selenium.pages.LoginPage.assertLoginSuccessful(LoginPage.java:72)
+	at com.selenium.tests.UsersPageTest.TC_OHRM_Admin_Users_SearchBtn_1(UsersPageTest.java:64)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -93,123 +71,26 @@ Session ID: dc18be85bb06db8e1ba24a63c17797f8
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testingLogIn -->
-        <test-method status="PASS" signature="cleanUpAfterEachTest(org.testng.ITestResult)[pri:0, instance:com.selenium.tests.LogInTest@152aa092]" name="cleanUpAfterEachTest" is-config="true" duration-ms="590" started-at="2022-04-07T03:44:18Z" finished-at="2022-04-07T03:44:19Z">
+        </test-method> <!-- TC_OHRM_Admin_Users_SearchBtn_1 -->
+        <test-method status="PASS" signature="cleanUpAfterEachTest(org.testng.ITestResult)[pri:0, instance:com.selenium.tests.UsersPageTest@2525ff7e]" name="cleanUpAfterEachTest" is-config="true" duration-ms="568" started-at="2022-04-18T00:26:48Z" finished-at="2022-04-18T00:26:49Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testingLogIn status=FAILURE method=LogInTest.testingLogIn(java.lang.String, java.lang.String)[pri:0, instance:com.selenium.tests.LogInTest@152aa092] output={null}]]]>
+                <![CDATA[[TestResult name=TC_OHRM_Admin_Users_SearchBtn_1 status=FAILURE method=UsersPageTest.TC_OHRM_Admin_Users_SearchBtn_1()[pri:0, instance:com.selenium.tests.UsersPageTest@2525ff7e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUpAfterEachTest -->
-        <test-method status="PASS" signature="setUpBeforeEachTest()[pri:0, instance:com.selenium.tests.LogInTest@152aa092]" name="setUpBeforeEachTest" is-config="true" duration-ms="1446" started-at="2022-04-07T03:44:19Z" finished-at="2022-04-07T03:44:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBeforeEachTest -->
-        <test-method status="FAIL" signature="testingLogIn(java.lang.String, java.lang.String)[pri:0, instance:com.selenium.tests.LogInTest@152aa092]" name="testingLogIn" duration-ms="13774" started-at="2022-04-07T03:44:20Z" data-provider="loginTestDateSet1" finished-at="2022-04-07T03:44:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[john]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[john333]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#menu_admin_viewAdminModule"}
-  (Session info: chrome=100.0.4896.60)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'XPS17', ip: '192.168.1.156', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e844bd7d8a97537d388cb08ff17300a3, findElement {using=id, value=menu_admin_viewAdminModule}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.60, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\salag\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56688}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56688/devtoo..., se:cdpVersion: 100.0.4896.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e844bd7d8a97537d388cb08ff17300a3]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#menu_admin_viewAdminModule"}
-  (Session info: chrome=100.0.4896.60)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'XPS17', ip: '192.168.1.156', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e844bd7d8a97537d388cb08ff17300a3, findElement {using=id, value=menu_admin_viewAdminModule}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.60, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\salag\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56688}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56688/devtoo..., se:cdpVersion: 100.0.4896.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e844bd7d8a97537d388cb08ff17300a3
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at com.selenium.pages.LoginPage.clickAdminTab(LoginPage.java:42)
-	at com.selenium.tests.LogInTest.testingLogIn(LogInTest.java:42)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testingLogIn -->
-        <test-method status="PASS" signature="cleanUpAfterEachTest(org.testng.ITestResult)[pri:0, instance:com.selenium.tests.LogInTest@152aa092]" name="cleanUpAfterEachTest" is-config="true" duration-ms="441" started-at="2022-04-07T03:44:34Z" finished-at="2022-04-07T03:44:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testingLogIn status=FAILURE method=LogInTest.testingLogIn(java.lang.String, java.lang.String)[pri:0, instance:com.selenium.tests.LogInTest@152aa092] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanUpAfterEachTest -->
-        <test-method status="PASS" signature="afterAllMethods()[pri:0, instance:com.selenium.tests.LogInTest@152aa092]" name="afterAllMethods" is-config="true" duration-ms="677" started-at="2022-04-07T03:44:34Z" finished-at="2022-04-07T03:44:35Z">
+        <test-method status="PASS" signature="afterAllMethods()[pri:0, instance:com.selenium.tests.UsersPageTest@2525ff7e]" name="afterAllMethods" is-config="true" duration-ms="618" started-at="2022-04-18T00:26:49Z" finished-at="2022-04-18T00:26:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterAllMethods -->
-      </class> <!-- com.selenium.tests.LogInTest -->
+      </class> <!-- com.selenium.tests.UsersPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

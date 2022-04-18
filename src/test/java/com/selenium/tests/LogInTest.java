@@ -11,7 +11,7 @@ public class LogInTest extends Base {
 	public static Logger log = LoggerFactory.getLogger(LogInTest.class);
 	LoginPage loginPage;
 
-	@Test(priority = 1, groups = "SmokeTest")
+	@Test(priority = 1, groups = "SmokeTest, Regression")
 	public void TC_OHRM_Login_1() {
 		loginPage = new LoginPage(driver);
 		loginPage.gotOrangeHRMWebsite();
@@ -20,7 +20,7 @@ public class LogInTest extends Base {
 		loginPage.clickLoginBtn();
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, enabled = true, groups = "Regression")
 	public void TC_OHRM_Login_2() {
 		loginPage = new LoginPage(driver);
 		loginPage.gotOrangeHRMWebsite();
@@ -30,7 +30,7 @@ public class LogInTest extends Base {
 		loginPage.assertIfInvalidCredentialsMessageIsPresent();
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, enabled = true, groups = "Regression")
 	public void TC_OHRM_Login_3() {
 		loginPage = new LoginPage(driver);
 		loginPage.gotOrangeHRMWebsite();
@@ -40,7 +40,7 @@ public class LogInTest extends Base {
 		loginPage.assertIfInvalidCredentialsMessageIsPresent();
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, enabled = true, groups = "Regression")
 	public void TC_OHRM_Login_4() {
 		loginPage = new LoginPage(driver);
 		loginPage.gotOrangeHRMWebsite();
