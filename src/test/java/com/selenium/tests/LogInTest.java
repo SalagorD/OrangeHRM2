@@ -11,7 +11,7 @@ public class LogInTest extends Base {
 	public static Logger log = LoggerFactory.getLogger(LogInTest.class);
 	LoginPage loginPage;
 
-	@Test(priority = 1, groups = "SmokeTest, Regression")
+	@Test(priority = 1, enabled = true, groups = "SmokeTest, Regression")
 	public void TC_OHRM_Login_1() {
 		loginPage = new LoginPage(driver);
 		loginPage.gotOrangeHRMWebsite();
