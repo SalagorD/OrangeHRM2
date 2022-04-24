@@ -185,6 +185,15 @@ public class SeleniumMethodsLibrary {
 	 */
 	private void setWebsiteWaits() {
 		try {
+			resetWebsiteWaits();
+		} catch (Exception e) {
+			log.error("Error", e);
+			assertTrue(false);
+		}
+	}
+
+	public void resetWebsiteWaits() {
+		try {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(waitTimeInSec));
 			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(waitTimeInSec));
 			driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(waitTimeInSec));
@@ -218,8 +227,8 @@ public class SeleniumMethodsLibrary {
 	// ############################################################################################################
 	// ############################################################################################################
 	// Selenium methods below:
-	
-	//TODO develop a method that selects from dropdown using LIST
+
+	// TODO develop a method that selects from dropdown using LIST
 	private void selectFromDynamicDropdown(By by, String visibleTextValue) {
 		try {
 			WebElement field = driver.findElement(by);
@@ -228,11 +237,11 @@ public class SeleniumMethodsLibrary {
 			field.sendKeys(visibleTextValue);
 			WebElement dropdownElem = driver.findElement(By.cssSelector("body > div.ac_results"));
 			List<WebElement> list = dropdownElem.findElements(By.tagName("li"));
-			for(WebElement listElem : list) {
+			for (WebElement listElem : list) {
 				Actions action = new Actions(driver);
 				action.moveToElement(listElem).perform();
 				String elemText = listElem.getText();
-				if(elemText.contains(visibleTextValue)) {
+				if (elemText.contains(visibleTextValue)) {
 					listElem.click();
 				}
 			}
@@ -469,7 +478,5 @@ public class SeleniumMethodsLibrary {
 		}
 		return fileNames;
 	}
-
-	
 
 }

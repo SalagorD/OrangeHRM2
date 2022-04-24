@@ -72,7 +72,7 @@ public class UsersPageTest extends Base {
 		adminUsrMgmtUsersPage.assertUsernameColumn("jhaey");
 	}
 
-	@Test(priority = 1, enabled = false, groups = "Regression")
+	@Test(priority = 1, enabled = true, groups = "Regression")
 	public void TC_OHRM_Admin_Users_SearchBtn_2() {
 		loginPage = new LoginPage(driver);
 		loginPage.gotOrangeHRMWebsite();
@@ -87,7 +87,7 @@ public class UsersPageTest extends Base {
 		adminUsrMgmtUsersPage.assertUserRoleColumn("Admin");
 	}
 
-	@Test(priority = 1, enabled = false, groups = "Regression")
+	@Test(priority = 1, enabled = true, groups = "Regression")
 	public void TC_OHRM_Admin_Users_SearchBtn_3() {
 		loginPage = new LoginPage(driver);
 		loginPage.gotOrangeHRMWebsite();
@@ -102,7 +102,7 @@ public class UsersPageTest extends Base {
 		adminUsrMgmtUsersPage.assertEmployeeNameColumn("Joe Root");
 	}
 
-	@Test(priority = 1, enabled = false, groups = "Regression")
+	@Test(priority = 1, enabled = true, groups = "Regression")
 	public void TC_OHRM_Admin_Users_SearchBtn_4() {
 		loginPage = new LoginPage(driver);
 		loginPage.gotOrangeHRMWebsite();

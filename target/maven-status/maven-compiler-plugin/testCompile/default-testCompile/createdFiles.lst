@@ -1,0 +1,17 @@
+com\selenium\pages\AdminPage.class
+com\selenium\library\SeleniumMethodsLibrary.class
+com\selenium\tests\UsersPageTest.class
+com\selenium\library\JavaPropertiesManager.class
+com\selenium\tests\LogInTest.class
+com\selenium\library\EmailManager.class
+com\selenium\library\TextFileManager.class
+com\selenium\pages\LoginPage.class
+com\selenium\pages\AdminUsrMgmtUsersPage.class
+com\selenium\library\SeleniumMethodsLibrary$1.class
+com\selenium\library\Base.class
+com\selenium\library\SeleniumMethodsLibrary$Browser.class
+com\selenium\pages\MyInfoPage.class
+com\selenium\pages\RecruitmentPage.class
+com\selenium\library\EmailManager$1.class
+com\selenium\library\ExcelManager.class
+com\selenium\pages\LeavePage.class

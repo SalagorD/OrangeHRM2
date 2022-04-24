@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="0" name="Failed suite [Automation Test suite]">
-  <test name="Default test(failed)">
+  <test name="All Tests2(failed)">
+    <groups>
+      <run>
+        <include name="A"/>
+      </run>
+    </groups>
     <classes>
       <class name="com.selenium.tests.LogInTest">
         <methods>
-          <include name="afterAllMethods"/>
-          <include name="beforeAllMethods"/>
           <include name="TC_OHRM_Login_1"/>
           <include name="setUpBeforeEachTest"/>
-          <include name="cleanUpAfterEachTest"/>
         </methods>
       </class> <!-- com.selenium.tests.LogInTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
+  </test> <!-- All Tests2(failed) -->
 </suite> <!-- Failed suite [Automation Test suite] -->

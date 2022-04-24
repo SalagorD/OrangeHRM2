@@ -5,8 +5,6 @@ import static org.testng.Assert.assertTrue;
 
 import java.util.List;
 
-import javax.swing.table.TableCellEditor;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -93,7 +91,7 @@ public class AdminUsrMgmtUsersPage extends Base {
 
 	public AdminUsrMgmtUsersPage enterUsername(String userName) {
 		try {
-			myLib.enterTextField(By.className(""), userName);
+			myLib.enterTextField(By.cssSelector("#searchSystemUser_userName"), userName);
 		} catch (Exception e) {
 			log.error("Error:", e);
 			assertTrue(false);
@@ -119,14 +117,14 @@ public class AdminUsrMgmtUsersPage extends Base {
 			field.sendKeys(employeeName);
 			WebElement dropdownElem = driver.findElement(By.cssSelector("body > div.ac_results"));
 			List<WebElement> list = dropdownElem.findElements(By.tagName("li"));
-			log.info("List size: " + list.size());
+			//log.info("List size: " + list.size());
 			for (WebElement listElem : list) {
 				Actions action = new Actions(driver);
 				action.moveToElement(listElem).perform();
 				String elemText = listElem.getText();
-				log.info("Element Text:" + elemText);
+				//log.info("Element Text:" + elemText);
 				if (elemText.contains(employeeName)) {
-					// listElem.click();
+					listElem.click();
 				}
 			}
 		} catch (Exception e) {
@@ -138,7 +136,7 @@ public class AdminUsrMgmtUsersPage extends Base {
 
 	public AdminUsrMgmtUsersPage selectStatus(String status) {
 		try {
-			myLib.selectFromDropdown(By.cssSelector(""), status);
+			myLib.selectFromDropdown(By.cssSelector("#searchSystemUser_status"), status);
 		} catch (Exception e) {
 			log.error("Error:", e);
 			assertTrue(false);
@@ -148,7 +146,7 @@ public class AdminUsrMgmtUsersPage extends Base {
 
 	public AdminUsrMgmtUsersPage clickSearchButton() {
 		try {
-			myLib.clickButton(By.cssSelector(""));
+			myLib.clickButton(By.cssSelector("#searchBtn"));
 		} catch (Exception e) {
 			log.error("Error:", e);
 			assertTrue(false);
@@ -158,7 +156,7 @@ public class AdminUsrMgmtUsersPage extends Base {
 
 	public AdminUsrMgmtUsersPage assertUsernameColumn(String userName) {
 		try {
-			int rowNum = assertColumn("User Name", userName);
+			int rowNum = assertColumn(2, userName);
 			if (rowNum > 1) {
 				assertTrue(false);
 			}
@@ -171,7 +169,7 @@ public class AdminUsrMgmtUsersPage extends Base {
 
 	public AdminUsrMgmtUsersPage assertUserRoleColumn(String userRole) {
 		try {
-			assertColumn("User Role", userRole);
+			assertColumn(3, userRole);
 		} catch (Exception e) {
 			log.error("Error:", e);
 			assertTrue(false);
@@ -181,7 +179,7 @@ public class AdminUsrMgmtUsersPage extends Base {
 
 	public AdminUsrMgmtUsersPage assertEmployeeNameColumn(String employeeName) {
 		try {
-			assertColumn("Employee Name", employeeName);
+			assertColumn(4, employeeName);
 		} catch (Exception e) {
 			log.error("Error:", e);
 			assertTrue(false);
@@ -191,7 +189,7 @@ public class AdminUsrMgmtUsersPage extends Base {
 
 	public AdminUsrMgmtUsersPage assertStatusColumn(String status) {
 		try {
-			assertColumn("Status", status);
+			assertColumn(5, status);
 		} catch (Exception e) {
 			log.error("Error:", e);
 			assertTrue(false);
@@ -199,25 +197,22 @@ public class AdminUsrMgmtUsersPage extends Base {
 		return this;
 	}
 
-	private int assertColumn(String columnName, String columnText) {
+	private int assertColumn(int columnOrder, String columnText) {
 		int rows = 0;
 		try {
-			WebElement tableElem = driver.findElement(By.cssSelector(""));
+			WebElement tableElem = driver.findElement(By.cssSelector("#resultTable > tbody"));
 			List<WebElement> list = tableElem.findElements(By.tagName("tr"));
 			rows = list.size();
 			for (WebElement listElem : list) {
-				
 				//find needed column from row elemet
-				WebElement columnElemData = listElem.findElement(By.cssSelector(""));
+				WebElement columnElemData = listElem.findElement(By.cssSelector("td:nth-child("+columnOrder+")"));
 				String columnElemText = columnElemData.getText();
-				if (columnElemText.contains(columnText)) {
+				if (columnElemText.equalsIgnoreCase(columnText)) {
 					// do nothing
+					//log.info("Cell's Text: ["+columnElemText+"]");
 				} else {
 					assertTrue(false);
 				}
-
-				// find data from column columnName and compare its data to clumn text, if
-				// columndata does not containt column text then asserttruefalse
 			}
 		} catch (Exception e) {
 			log.error("Error:", e);

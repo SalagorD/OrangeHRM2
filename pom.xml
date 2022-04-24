@@ -13,7 +13,7 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.1.1</version>
 		</dependency>
-		
+
 		<!-- TestNG dependency -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -21,7 +21,7 @@
 			<version>6.8</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- Log4j dependency 1 -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -55,7 +55,7 @@
 			<artifactId>javax.mail-api</artifactId>
 			<version>1.6.0</version>
 		</dependency>
-		<!--for email manager 2-->
+		<!--for email manager 2 -->
 		<dependency>
 			<groupId>com.sun.mail</groupId>
 			<artifactId>javax.mail</artifactId>

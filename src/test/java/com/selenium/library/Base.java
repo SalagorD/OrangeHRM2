@@ -45,7 +45,7 @@ public class Base {
 		return finalTimeStamp;
 	}
 
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void beforeAllMethods(ITestContext testContext) {
 		try {
 			log.info("==================================>Automation suite started");
@@ -65,7 +65,7 @@ public class Base {
 		}
 	}
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void setUpBeforeEachTest(Method methodName) {
 		try {
 			log.info("=====================>Starting test case:[" + methodName.getName() + "]");
@@ -91,7 +91,7 @@ public class Base {
 		}
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void cleanUpAfterEachTest(ITestResult iResult) {
 		try {
 			log.info("***************************************************>Performing endTest cleanUp");
@@ -111,7 +111,7 @@ public class Base {
 		}
 	}
 
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void afterAllMethods() {
 		try {
 			if (driver != null) {

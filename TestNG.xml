@@ -17,13 +17,70 @@
 	<!-- Running by method -->
 	<!-- <class name="test.Test1"> <methods> <include name="m1" /> <include 
 		name="m2" /> </methods> </class> -->
-
-
-	<test thread-count="5" name="Regression Tests" verbose="2">
+		
+	<!--Test -->
+	<test thread-count="5" name="All Tests" verbose="2">
 		<packages>
 			<package name="com.selenium.tests" />
 		</packages>
+	</test>
+
+	<!--Test -->
+	<test thread-count="5" name="All Tests" verbose="2">
+		<packages>
+			<package name="com.selenium.tests" />
+		</packages>
+	</test>
+
+	<!--Test -->
+	<test thread-count="5" name="SmokeTest" verbose="2">
+		<groups>
+			<run>
+				<include name="SmokeTest" />
+			</run>
+		</groups>
+	</test>
+
+	<!--Test -->
+	<test thread-count="5" name="Regression" verbose="2">
+		<groups>
+			<run>
+				<include name="Regression" />
+			</run>
+		</groups>
+	</test>
+	
+	<!--Test -->
+	<test thread-count="5" name="DataDrivenTest" verbose="2">
+		<groups>
+			<run>
+				<include name="DataDrivenTest" />
+			</run>
+		</groups>
+	</test>
+	
+	<!--Test -->
+	<test thread-count="5" name="SampleTest" verbose="2">
+		<groups>
+			<run>
+				<include name="" />
+			</run>
+		</groups>
+		<packages>
+			<package name="" />
+		</packages>
+		<classes>
+			<class name="">
+			</class>
+			<class name="">
+				<methods>
+					<include name="" />
+					<include name="" />
+				</methods>
+			</class>
+		</classes>
+	</test>
 
 
-	</test> <!-- Default test -->
+
 </suite> <!-- Default suite -->

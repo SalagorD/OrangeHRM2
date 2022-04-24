@@ -1,10 +1,9 @@
 package com.selenium.pages;
 
-import static org.junit.Assert.assertThat;
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -67,11 +66,18 @@ public class LoginPage extends Base {
 	public LoginPage assertLoginSuccessful() {
 		try {
 			// todo check if invalid credentials message appeared, if yes then stop the test
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
 			List<WebElement> errMsg = driver.findElements(By.cssSelector("#spanMessage"));
 			if (errMsg.size() > 0) {
 				log.info("Application is overloaded, please try gain later.");
 				assertTrue(false);
 			}
+			List<WebElement> welcomeUserBtn = driver.findElements(By.id("welcome"));
+			if (welcomeUserBtn.size() < 1) {
+				log.info("Application is overloaded, please try gain later.");
+				assertTrue(false);
+			}
+			myLib.resetWebsiteWaits();
 		} catch (Exception e) {
 			log.error("Error:", e);
 			assertTrue(false);
@@ -94,18 +100,18 @@ public class LoginPage extends Base {
 
 	public LoginPage assertLogin(String dataFlag) {
 		try {
-			String title = driver.getTitle();
-			if (dataFlag.contains("valid")) {
-				WebElement logoutBtn = driver.findElement(By.cssSelector(""));
-				if (logoutBtn.isDisplayed()) {
-					assertEquals("", title);
+			// String title = driver.getTitle();
+			if (dataFlag.equalsIgnoreCase("valid")) {
+				WebElement welcomeUserBtn = driver.findElement(By.id("welcome"));
+				if (welcomeUserBtn.isDisplayed()) {
+					// assertEquals("", title);
 				} else {
 					assertTrue(false);
 				}
-			} else if (dataFlag.contains("invalid")) {
-				WebElement invalidCredentialsMsg = driver.findElement(By.cssSelector("#spanMessage"));
-				if (invalidCredentialsMsg.isDisplayed()) {
-					assertEquals("", title);
+			} else if (dataFlag.equalsIgnoreCase("invalid")) {
+				WebElement loginBtn = driver.findElement(By.cssSelector("#btnLogin"));
+				if (loginBtn.isDisplayed()) {
+					// assertEquals("", title);
 				} else {
 					assertTrue(false);
 				}
