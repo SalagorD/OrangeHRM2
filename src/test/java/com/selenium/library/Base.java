@@ -31,7 +31,7 @@ public class Base {
 	private String toAddress;
 	private String ccAddress;
 	private String bccAddress;
-
+// I clone this project
 	// temp method to get current time
 	public String getCurrentTime() {
 		String finalTimeStamp = null;
